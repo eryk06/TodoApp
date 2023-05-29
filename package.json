@@ -35,5 +35,12 @@
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8"
   },
-  "private": true
+  "private": true,
+  "lint-staged": {
+    "*.ts": [
+      "yarn run lint",
+      "yarn run format",
+      "git add ."
+    ]
+  }
 }
