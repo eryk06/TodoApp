@@ -10,22 +10,22 @@
     "lint": "eslint --ext .tsx --ext .tsx ./src",
     "lint:fix": "eslint --fix --ext .tsx --ext .tsx ./src",
     "format": "prettier --check ./src",
-    "write": "prettier --write ./src",
-    "postinstall": "husky install"
+    "write": "prettier --write ./src"
   },
   "dependencies": {
     "@expo/webpack-config": "^18.0.1",
-    "@types/react": "~18.0.27",
-    "expo": "~48.0.15",
+    "@shopify/restyle": "^2.4.2",
+    "@types/react": "~18.2.7",
+    "expo": "~48.0.17",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.71.8",
     "react-native-web": "~0.18.10",
-    "typescript": "^4.9.4"
+    "typescript": "^5.0.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
+    "@babel/core": "^7.22.1",
     "@types/react-native": "^0.72.2",
     "babel-plugin-module-resolver": "^5.0.0",
     "eslint": "^8.41.0",
@@ -33,16 +33,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
     "prettier": "^2.8.8"
   },
-  "private": true,
-  "lint-staged": {
-    "*.ts": [
-      "yarn run lint",
-      "yarn run format",
-      "git add ."
-    ]
-  }
+  "private": true
 }
