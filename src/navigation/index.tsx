@@ -1,6 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { Text, View } from 'react-native';
+import AppStackNavigator from './app-stack-navigator';
 import AuthStackNavigator from './auth-stack-navigator';
 
 const Navigation = () => {
@@ -8,7 +8,8 @@ const Navigation = () => {
 
   return (
     <NavigationContainer>
-      <AuthStackNavigator />
+      {/* <AuthStackNavigator /> */}
+      <AppStackNavigator />
     </NavigationContainer>
   );
 };
