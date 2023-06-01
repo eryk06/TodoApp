@@ -1,3 +1,4 @@
+import SafeAreaWrapper from '@/components/shared/safe-area-wrapper';
 import { AuthScreenNavigationType } from '@/navigation/types';
 import { Box, Text } from '@/utils/theme';
 import { useNavigation } from '@react-navigation/native';
@@ -11,10 +12,12 @@ const SignUpScreen = () => {
   };
 
   return (
-    <Box>
-      <Text>Sign Up Screen</Text>
-      <Button title="Navigate to sign in" onPress={navigateToSignInScreen} />
-    </Box>
+    <SafeAreaWrapper>
+      <Box>
+        <Text>Sign Up Screen</Text>
+        <Button title="Navigate to sign in" onPress={navigateToSignInScreen} />
+      </Box>
+    </SafeAreaWrapper>
   );
 };
 
