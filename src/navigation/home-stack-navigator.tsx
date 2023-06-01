@@ -9,8 +9,16 @@ const Stack = createNativeStackNavigator<HomeStackParamList>();
 const HomeStackNavigator = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="EditTask" component={EditTaskScreen} />
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="EditTask"
+        component={EditTaskScreen}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 };

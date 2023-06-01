@@ -1,11 +1,14 @@
+import SafeAreaWrapper from '@/components/shared/safe-area-wrapper';
 import { Box, Text } from '@/utils/theme';
 import React from 'react';
 
 const EditTaskScreen = () => {
   return (
-    <Box>
-      <Text>Edit Task</Text>
-    </Box>
+    <SafeAreaWrapper>
+      <Box>
+        <Text>Edit Screen</Text>
+      </Box>
+    </SafeAreaWrapper>
   );
 };
 
