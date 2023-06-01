@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@shopify/restyle';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StatusBar } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Navigation from './navigation';
