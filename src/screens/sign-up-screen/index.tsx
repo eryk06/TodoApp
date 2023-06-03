@@ -5,6 +5,7 @@ import { AuthScreenNavigationType } from '@/navigation/types';
 import { Box, Text } from '@/utils/theme';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
+import { Pressable } from 'react-native';
 
 const SignUpScreen = () => {
   const navigation = useNavigation<AuthScreenNavigationType<'SignUp'>>();
@@ -27,7 +28,13 @@ const SignUpScreen = () => {
         <Input label="Email" />
         <Box mb="6" />
         <Input label="Password" />
-        <Box height={44} />
+        <Box mt="5.5" />
+        <Pressable onPress={navigateToSignInScreen}>
+          <Text color="primary" textAlign="right">
+            Log in?
+          </Text>
+        </Pressable>
+        <Box mb="5.5" />
         <Button label="Register" onPress={navigateToSignInScreen} uppercase />
       </Box>
     </SafeAreaWrapper>
