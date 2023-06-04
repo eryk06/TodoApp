@@ -12,8 +12,8 @@ type ButtonProps = {
 
 const Button = ({
   label,
-  onPress,
   onLongPress,
+  onPress,
   disabled,
   uppercase,
 }: ButtonProps) => {
