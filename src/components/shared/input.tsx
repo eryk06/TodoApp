@@ -1,13 +1,14 @@
 import theme, { Box, Text } from '@/utils/theme';
 import React from 'react';
+import { FieldError } from 'react-hook-form';
 import { TextInput, TextInputProps } from 'react-native';
 
 type InputProps = {
   label: string;
-  error?: undefined;
+  error?: FieldError | undefined;
 } & TextInputProps;
 
-const Input = ({ label }: InputProps) => {
+const Input = ({ label, error, ...props }: InputProps) => {
   return (
     <Box flexDirection="column">
       <Text variant="textXs" textTransform="uppercase" mb="3.5">
@@ -17,11 +18,16 @@ const Input = ({ label }: InputProps) => {
         style={{
           padding: 16,
           borderWidth: 1,
-          borderColor: theme.colors.grey,
+          borderColor: error ? theme.colors.rose500 : theme.colors.grey,
           borderRadius: theme.borderRadii['rounded-7xl'],
         }}
-        placeholder={'Email'}
+        {...props}
       />
+      {error && (
+        <Text mt="3.5" color="rose500">
+          {label} is required
+        </Text>
+      )}
     </Box>
   );
 };
