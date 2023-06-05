@@ -1,5 +1,5 @@
 import { IUser } from '@/types/index';
-import axiosInstance, { saveToken } from './config';
+import axiosInstance,  { TODOLIST_TOKEN_NAME, saveToken } from './config';
 
 type RegisterUserTypes = IUser;
 
@@ -21,20 +21,20 @@ export const registerUser = async ({
   }
 };
 
-// type LoginUserTypes = Omit<IUser, 'name'>;
+type LoginUserTypes = Omit<IUser, 'name'>;
 
-// export const loginUser = async ({ email, password }: LoginUserTypes) => {
-//   try {
-//     const response = await axiosInstance.post('/users/login', {
-//       email,
-//       password,
-//     });
-//     const _token = response.data.token;
-//     axiosInstance.defaults.headers.common['Authorization'] = _token;
-//     saveToken(TODO_LIST_NAME, _token);
-//     return response.data.user;
-//   } catch (error) {
-//     console.log('error in loginUser', error);
-//     throw error;
-//   }
-// };
+export const loginUser = async ({ email, password }: LoginUserTypes) => {
+  try {
+    const response = await axiosInstance.post('/users/login', {
+      email,
+      password,
+    });
+    const _token = response.data.token;
+    axiosInstance.defaults.headers.common['Authorization'] = _token;
+    saveToken(TODOLIST_TOKEN_NAME, _token);
+    return response.data.user;
+  } catch (error) {
+    console.log('error in loginUser', error);
+    throw error;
+  }
+};
