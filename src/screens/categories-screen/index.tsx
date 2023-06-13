@@ -29,9 +29,14 @@ const CategoriesScreen = () => {
   return (
     <SafeAreaWrapper>
       <Box flex={1} px="4">
-        <Text variant="textXl" fontWeight="700" mb="10">
-          Categories
-        </Text>
+        <Box height={16} />
+        <Box flexDirection="row">
+          <Text variant="textXl" fontWeight="700" ml="3">
+            Thể loại
+          </Text>
+        </Box>
+        <Box height={16} />
+
         <FlatList
           data={data}
           showsVerticalScrollIndicator={false}

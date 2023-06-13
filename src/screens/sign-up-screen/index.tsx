@@ -46,10 +46,10 @@ const SignUpScreen = () => {
     <SafeAreaWrapper>
       <Box flex={1} px="5.5" mt={'13'}>
         <Text variant="textXl" fontWeight="700">
-          Welcome to Blossom!
+          Chào mừng bạn đến với ứng dụng Quản Lý Công Việc Và Nhắc Việc!
         </Text>
         <Text variant="textXl" fontWeight="700" mb="6">
-          Your journey starts here
+          Hành trình của bạn bắt đầu từ đây.
         </Text>
 
         <Controller
@@ -59,11 +59,11 @@ const SignUpScreen = () => {
           }}
           render={({ field: { onChange, onBlur, value } }) => (
             <Input
-              label="Name"
+              label="Tên"
               onBlur={onBlur}
               onChangeText={onChange}
               value={value}
-              placeholder="Name"
+              placeholder="Tên"
               error={errors.name}
             />
           )}
@@ -95,11 +95,11 @@ const SignUpScreen = () => {
           }}
           render={({ field: { onChange, onBlur, value } }) => (
             <Input
-              label="Password"
+              label="Mật khẩu"
               onBlur={onBlur}
               onChangeText={onChange}
               value={value}
-              placeholder="Password"
+              placeholder="Mật khẩu"
               error={errors.name}
               secureTextEntry
             />
@@ -109,12 +109,12 @@ const SignUpScreen = () => {
         <Box mt="5.5" />
         <Pressable onPress={navigateToSignInScreen}>
           <Text color="primary" textAlign="right">
-            Log in?
+            Đăng nhập ?
           </Text>
         </Pressable>
         <Box mb="5.5" />
 
-        <Button label="Register" onPress={handleSubmit(onSubmit)} uppercase />
+        <Button label="Đăng ký" onPress={handleSubmit(onSubmit)} uppercase />
       </Box>
     </SafeAreaWrapper>
   );

@@ -26,7 +26,7 @@ const TodayScreen = () => {
         <Box height={16} />
         <Box flexDirection="row">
           <Text variant="textXl" fontWeight="700" ml="3">
-            Today
+            Hôm nay
           </Text>
         </Box>
         <Box height={16} />

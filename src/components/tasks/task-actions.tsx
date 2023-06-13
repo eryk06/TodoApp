@@ -97,12 +97,12 @@ const TaskActions = ({ categoryId }: TaskActionsProps) => {
         position="relative"
       >
         <TextInput
-          placeholder="Create a new task"
+          placeholder="Tạo một nhiệm vụ mới"
           style={{
             paddingVertical: 8,
             paddingHorizontal: 8,
             fontSize: 16,
-            width: '50%',
+            width: '60%',
           }}
           maxLength={36}
           textAlignVertical="center"
@@ -132,7 +132,7 @@ const TaskActions = ({ categoryId }: TaskActionsProps) => {
             >
               <Text>
                 {isToday(new Date(newTask.date))
-                  ? 'Today'
+                  ? 'Hôm nay'
                   : format(new Date(newTask.date), 'MMM dd')}
               </Text>
             </Box>

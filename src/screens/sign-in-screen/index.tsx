@@ -47,7 +47,7 @@ const SignInScreen = () => {
     <SafeAreaWrapper>
       <Box flex={1} px="5.5" justifyContent="center">
         <Text variant="textXl" fontWeight="700">
-          Welcome Back
+        Chào mừng trở lại
         </Text>
         <Box mb="6" />
         <Controller
@@ -75,11 +75,11 @@ const SignInScreen = () => {
           }}
           render={({ field: { onChange, onBlur, value } }) => (
             <Input
-              label="Password"
+              label="Mật khẩu"
               onBlur={onBlur}
               onChangeText={onChange}
               value={value}
-              placeholder="Password"
+              placeholder="Mật khẩu"
               error={errors.password}
               secureTextEntry
             />
@@ -89,12 +89,12 @@ const SignInScreen = () => {
         <Box mt="5.5" />
         <Pressable onPress={navigateToSignInScreen}>
           <Text color="primary" textAlign="right">
-            Register?
+            Đăng ký ?
           </Text>
         </Pressable>
         <Box mb="5.5" />
 
-        <Button label="Login" onPress={handleSubmit(onSubmit)} uppercase />
+        <Button label="Đăng nhập" onPress={handleSubmit(onSubmit)} uppercase />
       </Box>
     </SafeAreaWrapper>
   )

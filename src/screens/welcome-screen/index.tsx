@@ -35,22 +35,14 @@ const WelcomeScreen = () => {
             <Image source={require('../../media/images/Android.png')} />
           </Box>
           <Text textAlign="center" variant="textXl" fontWeight="700">
-            Do you want to be more productive?
+            Bạn có muốn làm việc hiệu quả hơn không?
           </Text>
           <Box my="3.5" mx="10">
             <Button
-              label="Start your journey"
+              label="Bắt đầu hành trình của bạn"
               onPress={navigateToSignUpScreen}
             />
           </Box>
-          <Text
-            textAlign="center"
-            variant="textXs"
-            fontWeight="700"
-            color="gray5"
-          >
-            26,698 registered today
-          </Text>
         </Box>
       </LinearGradient>
     </SafeAreaWrapper>
