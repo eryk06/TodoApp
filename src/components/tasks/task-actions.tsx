@@ -101,7 +101,7 @@ const TaskActions = ({ categoryId }: TaskActionsProps) => {
           style={{
             paddingVertical: 8,
             paddingHorizontal: 8,
-            fontSize: 16,
+            fontSize: 14,
             width: '60%',
           }}
           maxLength={36}

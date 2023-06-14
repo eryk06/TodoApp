@@ -21,7 +21,9 @@ const formattedDate = format(today, 'eeee, dd/LL', { locale: vi });
 const getVietnameseGreeting = (hour) => {
   if (hour >= 0 && hour < 12) {
     return 'buổi sáng';
-  } else if (hour >= 12 && hour < 18) {
+  } else if (hour >= 12 && hour < 16) {
+    return 'buổi trưa';
+  } else if (hour >= 16 && hour < 18) {
     return 'buổi chiều';
   } else {
     return 'buổi tối';
@@ -49,12 +51,13 @@ const HomeScreen = () => {
       <Box flex={1} mx="4">
         <AnimatedText
           variant="textXl"
+          marginTop={'5'}
           fontWeight="500"
           entering={ZoomInEasyDown.delay(500).duration(700)}
         >
           Xin chào {greeting} {user?.name}
         </AnimatedText>
-        <Text variant="textXl" fontWeight="500">
+        <Text variant="textBase" fontWeight="500" marginTop="3">
           Hôm nay là {formattedDate} 😊 {tasks.length} nhiệm vụ
         </Text>
         <Box height={26} />

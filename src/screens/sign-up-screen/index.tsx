@@ -8,7 +8,7 @@ import { Box, Text } from '@/utils/theme';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
-import { Pressable } from 'react-native';
+import { Pressable, View } from 'react-native';
 
 const SignUpScreen = () => {
   const navigation = useNavigation<AuthScreenNavigationType<'SignUp'>>();
@@ -45,12 +45,14 @@ const SignUpScreen = () => {
   return (
     <SafeAreaWrapper>
       <Box flex={1} px="5.5" mt={'13'}>
-        <Text variant="textXl" fontWeight="700">
-          Chào mừng bạn đến với ứng dụng Quản Lý Công Việc Và Nhắc Việc!
-        </Text>
-        <Text variant="textXl" fontWeight="700" mb="6">
-          Hành trình của bạn bắt đầu từ đây.
-        </Text>
+        <View style={{justifyContent: "center", alignItems: "center"}}>
+          <Text variant="textLg" fontWeight="700">
+            Chào mừng bạn đến với ứng dụng Quản Lý Công Việc Và Nhắc Việc!
+          </Text>
+          <Text variant="textLg" fontWeight="700" mb="6">
+            Hành trình của bạn bắt đầu từ đây.
+          </Text>
+        </View>
 
         <Controller
           control={control}

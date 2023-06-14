@@ -200,7 +200,7 @@ const CreateCategoryScreen = () => {
         <Box bg="gray250" p="4" borderRadius="rounded-2xl">
           <Box
             bg="white"
-            width={80}
+            width={120}
             p="2"
             mb="4"
             borderRadius="rounded-2xl"
@@ -275,7 +275,7 @@ const CreateCategoryScreen = () => {
             })}
           </Box>
         </Box>
-        <Box position="absolute" bottom={4} left={0} right={0}>
+        <Box position="absolute" bottom={10} left={0} right={0}>
           <Button
             label={isEditing ? 'Chỉnh sửa danh mục' : 'Tạo danh mục mới'}
             onPress={createNewCategory}
