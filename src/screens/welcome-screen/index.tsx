@@ -5,6 +5,7 @@ import { Box, Text } from '@/utils/theme';
 import { useNavigation } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react';
+import { Pressable, View } from 'react-native';
 import { Image } from 'react-native';
 
 const WelcomeScreen = () => {
@@ -31,26 +32,22 @@ const WelcomeScreen = () => {
         style={{ flex: 1 }}
       >
         <Box flex={1} justifyContent="center">
-          <Box alignItems="center" mb="3.5">
+          <Box style={{ justifyContent: "center", alignItems: "center", marginTop: 50, marginBottom: 5}}>
             <Image source={require('../../media/images/Android.png')} />
           </Box>
-          <Text textAlign="center" variant="textXl" fontWeight="700">
-            Do you want to be more productive?
+          <View style={{justifyContent: "center", alignItems: "center"}}>
+          <Text style={{width: "100%", color: "#000", textAlign: "center",fontSize: 16, fontWeight: 700}}>
+            Bạn có muốn làm việc hiệu quả hơn không?
           </Text>
-          <Box my="3.5" mx="10">
-            <Button
-              label="Start your journey"
+          </View>
+          <Box mx="10" style={{justifyContent: "center", alignItems: "center"}}>
+            <Pressable
               onPress={navigateToSignUpScreen}
-            />
+              style={{ width: "100%", height: "26%", borderRadius: 25, backgroundColor: '#007AFF', justifyContent: "center", alignItems: "center" }}
+            >
+              <Text variant="textXl" style={{color: "#fff", fontWeight: 600}}>Bắt đầu</Text>
+            </Pressable>
           </Box>
-          <Text
-            textAlign="center"
-            variant="textXs"
-            fontWeight="700"
-            color="gray5"
-          >
-            26,698 registered today
-          </Text>
         </Box>
       </LinearGradient>
     </SafeAreaWrapper>

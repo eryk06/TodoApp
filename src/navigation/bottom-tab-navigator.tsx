@@ -24,7 +24,7 @@ const BottomTabNavigator = () => {
         name="HomeStack"
         component={HomeStackNavigator}
         options={() => ({
-          title: 'Home',
+          title: 'Trang chủ',
           tabBarIcon: ({ color }) => <Icons name="home" color={color} />,
           headerShown: false,
         })}
@@ -33,7 +33,7 @@ const BottomTabNavigator = () => {
         name="Completed"
         component={CompletedScreen}
         options={() => ({
-          title: 'Completed',
+          title: 'Hoàn thành',
           tabBarIcon: ({ color }) => <Icons name="completed" color={color} />,
           headerShown: false,
         })}
@@ -42,7 +42,7 @@ const BottomTabNavigator = () => {
         name="Today"
         component={TodayScreen}
         options={() => ({
-          title: 'Today',
+          title: 'Hôm nay',
           tabBarIcon: ({ color }) => <Icons name="calendar" color={color} />,
           headerShown: false,
         })}
@@ -52,7 +52,7 @@ const BottomTabNavigator = () => {
         name="CategoriesStack"
         component={CategoriesStackNavigator}
         options={() => ({
-          title: 'Categories',
+          title: 'Thể loại',
           tabBarIcon: ({ color }) => <Icons name="categories" color={color} />,
           headerShown: false,
         })}

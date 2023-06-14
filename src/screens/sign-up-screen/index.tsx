@@ -8,7 +8,7 @@ import { Box, Text } from '@/utils/theme';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
-import { Pressable } from 'react-native';
+import { Pressable, View } from 'react-native';
 
 const SignUpScreen = () => {
   const navigation = useNavigation<AuthScreenNavigationType<'SignUp'>>();
@@ -45,12 +45,14 @@ const SignUpScreen = () => {
   return (
     <SafeAreaWrapper>
       <Box flex={1} px="5.5" mt={'13'}>
-        <Text variant="textXl" fontWeight="700">
-          Welcome to Blossom!
-        </Text>
-        <Text variant="textXl" fontWeight="700" mb="6">
-          Your journey starts here
-        </Text>
+        <View style={{justifyContent: "center", alignItems: "center"}}>
+          <Text variant="textLg" fontWeight="700">
+            Chào mừng bạn đến với ứng dụng Quản Lý Công Việc Và Nhắc Việc!
+          </Text>
+          <Text variant="textLg" fontWeight="700" mb="6">
+            Hành trình của bạn bắt đầu từ đây.
+          </Text>
+        </View>
 
         <Controller
           control={control}
@@ -59,11 +61,11 @@ const SignUpScreen = () => {
           }}
           render={({ field: { onChange, onBlur, value } }) => (
             <Input
-              label="Name"
+              label="Tên"
               onBlur={onBlur}
               onChangeText={onChange}
               value={value}
-              placeholder="Name"
+              placeholder="Tên"
               error={errors.name}
             />
           )}
@@ -95,11 +97,11 @@ const SignUpScreen = () => {
           }}
           render={({ field: { onChange, onBlur, value } }) => (
             <Input
-              label="Password"
+              label="Mật khẩu"
               onBlur={onBlur}
               onChangeText={onChange}
               value={value}
-              placeholder="Password"
+              placeholder="Mật khẩu"
               error={errors.name}
               secureTextEntry
             />
@@ -109,12 +111,12 @@ const SignUpScreen = () => {
         <Box mt="5.5" />
         <Pressable onPress={navigateToSignInScreen}>
           <Text color="primary" textAlign="right">
-            Log in?
+            Đăng nhập ?
           </Text>
         </Pressable>
         <Box mb="5.5" />
 
-        <Button label="Register" onPress={handleSubmit(onSubmit)} uppercase />
+        <Button label="Đăng ký" onPress={handleSubmit(onSubmit)} uppercase />
       </Box>
     </SafeAreaWrapper>
   );

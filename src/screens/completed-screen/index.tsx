@@ -28,7 +28,7 @@ const CompletedScreen = () => {
         <Box height={16} />
         <Box flexDirection="row">
           <Text variant="textXl" fontWeight="700" ml="3">
-            Completed
+            Hoàn thành
           </Text>
         </Box>
         <Box height={16} />
